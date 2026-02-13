@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cute Collage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <main class="page-shell subpage-wrap">
+        <a class="top-back" href="index.php">&larr; Back to Card</a>
+        <h1 class="hero-title">Our Sweet Photo Collage &#128248;</h1>
+
+        <section class="panel collage-grid">
+            <figure class="collage-photo"><img src="assets/images/p1.jpg" alt="Couple photo 1"><span class="sticker s1">&#128151;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p2.jpg" alt="Couple photo 2"><span class="sticker s2">&#129528;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p3.jpg" alt="Couple photo 3"><span class="sticker s1">&#127801;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p4.jpg" alt="Couple photo 4"><span class="sticker s2">&#128152;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p5.jpg" alt="Couple photo 5"><span class="sticker s1">&#10024;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p6.jpg" alt="Couple photo 6"><span class="sticker s2">&#128149;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p7.jpg" alt="Couple photo 7"><span class="sticker s1">&#128151;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p8.jpg" alt="Couple photo 8"><span class="sticker s2">&#129528;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p9.jpg" alt="Couple photo 9"><span class="sticker s1">&#127801;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p10.jpg" alt="Couple photo 10"><span class="sticker s2">&#128152;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p11.jpg" alt="Couple photo 11"><span class="sticker s1">&#10024;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p12.jpg" alt="Couple photo 12"><span class="sticker s2">&#128149;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p13.jpg" alt="Couple photo 13"><span class="sticker s1">&#128151;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p14.jpg" alt="Couple photo 14"><span class="sticker s2">&#129528;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p15.jpg" alt="Couple photo 15"><span class="sticker s1">&#127801;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p16.jpg" alt="Couple photo 16"><span class="sticker s2">&#128152;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p17.jpg" alt="Couple photo 17"><span class="sticker s1">&#10024;</span></figure>
+            <figure class="collage-photo"><img src="assets/images/p18.jpg" alt="Couple photo 18"><span class="sticker s2">&#128149;</span></figure>
+        </section>
+    </main>
+</body>
+</html>

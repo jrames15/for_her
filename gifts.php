@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts & Flower Drawing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <main class="page-shell subpage-wrap">
+        <a class="top-back" href="index.php">← Back to Card</a>
+        <h1 class="hero-title">Tiny Gifts & Cute Fun 🎁</h1>
+        <p class="hero-sub">Gift ideas + a flower drawing board you can use right now.</p>
+
+        <section class="gifts-grid">
+            <article class="gift-item">
+                <h3>🧸 Cute Toy Pick</h3>
+                <p>Choose a teddy bear, plush bunny, or mini couple keychain as a soft reminder of your love.</p>
+            </article>
+            <article class="gift-item">
+                <h3>🍫 Sweet Treat Box</h3>
+                <p>Build a custom chocolates + snacks box with a tiny handwritten note inside.</p>
+            </article>
+            <article class="gift-item">
+                <h3>🌷 Hand-Drawn Flower</h3>
+                <p>Draw a flower below with your finger or mouse and send her a screenshot.</p>
+            </article>
+        </section>
+
+        <section class="panel" style="margin-top: 1rem;">
+            <h3 style="margin-top:0;">Interactive Flower Canvas</h3>
+            <canvas id="flowerCanvas" class="flower-canvas" width="900" height="260" aria-label="Draw a flower for your girlfriend"></canvas>
+        </section>
+    </main>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

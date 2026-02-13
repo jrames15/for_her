@@ -1,0 +1,288 @@
+:root {
+    --pink-bg: #fff1f7;
+    --pink-soft: #ffd9ea;
+    --pink-main: #ff5f9e;
+    --pink-dark: #c62672;
+    --lavender: #e7d8ff;
+    --text: #5a2c45;
+    --white: #ffffff;
+    --shadow: 0 16px 35px rgba(198, 38, 114, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    background: radial-gradient(circle at top, var(--pink-soft), var(--pink-bg) 45%, #fff 90%);
+    min-height: 100vh;
+}
+
+.page-shell {
+    width: min(1100px, 94vw);
+    margin: 0 auto;
+    padding: 1.5rem 0 3rem;
+    position: relative;
+}
+
+.floating-stickers {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-stickers span {
+    position: absolute;
+    font-size: clamp(1.3rem, 1.1rem + 1vw, 2.2rem);
+    animation: drift 8s ease-in-out infinite;
+    opacity: 0.65;
+}
+
+.floating-stickers span:nth-child(1) { left: 8%; top: 15%; }
+.floating-stickers span:nth-child(2) { left: 85%; top: 20%; animation-delay: .5s; }
+.floating-stickers span:nth-child(3) { left: 15%; top: 80%; animation-delay: 1.2s; }
+.floating-stickers span:nth-child(4) { left: 76%; top: 72%; animation-delay: 1.8s; }
+.floating-stickers span:nth-child(5) { left: 46%; top: 8%; animation-delay: 2.2s; }
+
+@keyframes drift {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(6deg); }
+}
+
+.card-scene {
+    perspective: 1200px;
+    margin-top: 0.8rem;
+    z-index: 1;
+    position: relative;
+}
+
+.valentine-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--white);
+    position: relative;
+}
+
+.card-lid,
+.card-content {
+    padding: clamp(1.2rem, 1rem + 1.6vw, 2.4rem);
+    text-align: center;
+}
+
+.card-lid {
+    cursor: pointer;
+    background: linear-gradient(160deg, #ff91bf, var(--pink-main));
+    color: var(--white);
+    transform-origin: top center;
+    transition: transform 900ms cubic-bezier(.2,.8,.2,1), box-shadow 800ms ease;
+    will-change: transform;
+}
+
+.card-lid h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem);
+    margin: 0 0 .4rem;
+}
+
+.card-lid p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.card-content {
+    background: linear-gradient(180deg, #fff, #fff7fc);
+}
+
+.card-content h2 {
+    margin: 0 0 .7rem;
+    font-family: 'Pacifico', cursive;
+    color: var(--pink-dark);
+    font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+}
+
+.soft-note {
+    color: #86415f;
+    font-weight: 700;
+}
+
+.valentine-card.open .card-lid {
+    transform: rotateX(120deg) translateY(-2px);
+    box-shadow: 0 18px 30px rgba(0,0,0,.2);
+}
+
+.category-section {
+    margin-top: 1.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .7s ease, transform .7s ease;
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+
+.category-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.category-card {
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(155deg, #fff, #ffeefa);
+    border-radius: 20px;
+    padding: 1rem;
+    border: 1px solid #ffd1e5;
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.category-card:hover,
+.category-card:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(198, 38, 114, 0.28);
+}
+
+.category-emoji {
+    font-size: 2rem;
+}
+
+.btn-like {
+    display: inline-block;
+    margin-top: .65rem;
+    background: var(--pink-main);
+    color: #fff;
+    font-weight: 800;
+    padding: .5rem .85rem;
+    border-radius: 999px;
+}
+
+.subpage-wrap {
+    position: relative;
+    z-index: 1;
+    padding-top: 1.4rem;
+}
+
+.top-back {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--pink-dark);
+    background: #fff;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    border: 1px solid #ffc3de;
+}
+
+.hero-title {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2rem, 1.2rem + 2vw, 3rem);
+    margin-bottom: .35rem;
+}
+
+.hero-sub {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.panel {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid #ffd1e5;
+    box-shadow: var(--shadow);
+    padding: clamp(1rem, .9rem + 1vw, 1.5rem);
+}
+
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.collage-photo {
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 10px 20px rgba(90,44,69,.15);
+}
+
+.collage-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.collage-photo {
+    grid-column: span 1;
+}
+
+.sticker {
+    position: absolute;
+    font-size: 1.7rem;
+    animation: pop 2.8s ease-in-out infinite;
+}
+
+.sticker.s1 { top: 8px; right: 8px; }
+.sticker.s2 { left: 8px; bottom: 8px; animation-delay: 1s; }
+
+@keyframes pop {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.08) rotate(7deg); }
+}
+
+.message-box {
+    line-height: 1.8;
+    font-size: clamp(1rem, .9rem + .5vw, 1.1rem);
+}
+
+.message-box p {
+    margin-bottom: 1rem;
+}
+
+.gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .8rem;
+}
+
+.gift-item {
+    background: #fff7fc;
+    border: 1px dashed #ffb4d6;
+    border-radius: 16px;
+    padding: .9rem;
+}
+
+.flower-canvas {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fef5fa, #ffe6f2);
+    border: 1px solid #ffd1e5;
+}
+
+@media (max-width: 900px) {
+    .category-section,
+    .gifts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .collage-photo {
+        grid-column: span 1;
+    }
+}
