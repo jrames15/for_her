@@ -272,6 +272,40 @@ body {
     border: 1px solid #ffd1e5;
 }
 
+.canvas-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: .75rem;
+}
+
+.canvas-btn {
+    border: 1px solid #ffc3de;
+    background: #fff;
+    color: var(--pink-dark);
+    font-weight: 800;
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.canvas-btn:hover:not(:disabled),
+.canvas-btn:focus-visible:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(198, 38, 114, 0.18);
+}
+
+.canvas-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.canvas-btn-clear {
+    border-color: #ff9bc6;
+    background: #ffe8f3;
+}
+
 @media (max-width: 900px) {
     .category-section,
     .gifts-grid {
