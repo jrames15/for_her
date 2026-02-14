@@ -1,26 +1,4 @@
-<?php
-$categories = [
-    [
-        'title' => 'Our Cute Photo Collage',
-        'description' => 'Tap to open a sweet collage page with your favorite photos together.',
-        'link' => 'collage.php',
-        'emoji' => '📸'
-    ],
-    [
-        'title' => 'My Valentine Message',
-        'description' => 'A long heartfelt message with extra-cute vibes and stickers.',
-        'link' => 'message.php',
-        'emoji' => '💌'
-    ],
-    [
-        'title' => 'Gifts, Toys & Flower Drawing',
-        'description' => 'Fun interactive ideas and tiny surprises for your love.',
-        'link' => 'gifts.php',
-        'emoji' => '🎁'
-    ]
-];
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,17 +12,17 @@ $categories = [
 <body>
     <main class="page-shell">
         <div class="floating-stickers" aria-hidden="true">
-            <span>💖</span><span>🌹</span><span>✨</span><span>🧸</span><span>💘</span>
+            <span>&#128150;</span><span>&#127801;</span><span>&#10024;</span><span>&#129528;</span><span>&#128152;</span>
         </div>
 
         <section class="card-scene">
             <article class="valentine-card" id="valentineCard" aria-label="Valentine greeting card">
                 <div class="card-lid" id="cardLid">
-                    <h1>Open Me, Babyyy 💕</h1>
+                    <h1>Open Me, Babyyy &#128149;</h1>
                     <p>Click to reveal your Valentine surprise.</p>
                 </div>
                 <div class="card-content" id="cardContent">
-                    <h2>Happy Valentine's Day, My Bebiiii! 🌷</h2>
+                    <h2>Happy Valentine's Day, My Bebiiii! &#127801;</h2>
                     <p>
                         You are my favorite hello and my hardest goodbye.
                         I made this little website just for us.
@@ -55,14 +33,24 @@ $categories = [
         </section>
 
         <section class="category-section" id="categorySection" aria-label="Valentine categories">
-            <?php foreach ($categories as $item): ?>
-                <a class="category-card" href="<?php echo htmlspecialchars($item['link']); ?>">
-                    <div class="category-emoji"><?php echo $item['emoji']; ?></div>
-                    <h3><?php echo htmlspecialchars($item['title']); ?></h3>
-                    <p><?php echo htmlspecialchars($item['description']); ?></p>
-                    <span class="btn-like">Open</span>
-                </a>
-            <?php endforeach; ?>
+            <a class="category-card" href="collage.html">
+                <div class="category-emoji">&#128248;</div>
+                <h3>Our Cute Photo Collage</h3>
+                <p>Tap to open a sweet collage page with your favorite photos together.</p>
+                <span class="btn-like">Open</span>
+            </a>
+            <a class="category-card" href="message.html">
+                <div class="category-emoji">&#128140;</div>
+                <h3>My Valentine Message</h3>
+                <p>A long heartfelt message with extra-cute vibes and stickers.</p>
+                <span class="btn-like">Open</span>
+            </a>
+            <a class="category-card" href="gifts.html">
+                <div class="category-emoji">&#127873;</div>
+                <h3>Gifts, Toys & Flower Drawing</h3>
+                <p>Fun interactive ideas and tiny surprises for your love.</p>
+                <span class="btn-like">Open</span>
+            </a>
         </section>
     </main>
 
